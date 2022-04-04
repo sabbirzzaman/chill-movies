@@ -7,7 +7,7 @@ import WatchLater from './components/WatchLater/WatchLater';
 
 function App() {
   return (
-    <div className='max-w-[1140px] mx-auto'>
+    <div className='max-w-[325px] mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Movies></Movies>}></Route>
