@@ -24,7 +24,8 @@ const Header = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center py-4 border-b lg:py-8">
+        <div className='max-w-[325px] mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]'>
+            <nav className="flex justify-between items-center py-4 lg:py-8">
             <div className="z-10">
                 <Link className="text-2xl font-extrabold text-red-500" to="/">
                     Movie Chill
@@ -45,6 +46,12 @@ const Header = () => {
                         : 'hidden lg:flex gap-6'
                 }
             >
+                <CustomLink
+                    className="hover:text-red-500 font-bold transition-all delay-75"
+                    to="/home"
+                >
+                    Home
+                </CustomLink>
                 <CustomLink
                     className="hover:text-red-500 font-bold transition-all delay-75"
                     to="/movies"
@@ -69,6 +76,7 @@ const Header = () => {
                 </CustomLink>
             </div>
         </nav>
+        </div>
     );
 };
 

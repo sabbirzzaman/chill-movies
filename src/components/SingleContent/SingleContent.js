@@ -1,5 +1,5 @@
 import React from 'react';
-import { img_300 } from '../../config/config';
+import { img_300, unavailable } from '../../config/config';
 
 const SingleContent = ({ content }) => {
     const { title, name, poster_path } = content;
@@ -8,7 +8,7 @@ const SingleContent = ({ content }) => {
         <div className="w-[300px] bg-gray-900 mx-auto mb-8">
             <img
                 className="border border-b-0"
-                src={`${img_300}/${poster_path}`}
+                src={`${img_300}/${poster_path}` || unavailable}
                 alt={title || name}
             />
 
