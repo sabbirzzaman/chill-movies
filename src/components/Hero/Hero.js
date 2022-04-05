@@ -8,7 +8,7 @@ const Hero = ({ movies }) => {
         backgroundImage: `url(${img_1920}/${backdrop_path}`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '550px',
+        height: '620px',
         width: '100%',
     };
     
