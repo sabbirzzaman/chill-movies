@@ -1,19 +1,17 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useContent from '../../hooks/useContent';
+import SingleMovie from '../SingleMovie/SingleMovie';
 
 const Movies = () => {
-    const [movies, setMovies] = useState([]);
+    const urlLink = 'https://api.themoviedb.org/3/trending/movie/day?api_key=';
 
-    useEffect(()=> {
-        axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`)
-        .then(data => setMovies(data.data.results))
-    }, [])
-
-    console.log(movies);
+    const [movies] = useContent(urlLink);
 
     return (
-        <div>
-            <h2>This is movies!!!</h2>
+        <div className=''>
+            {movies.map((movie) => (
+                <SingleMovie key={movie.id} movie={movie}></SingleMovie>
+            ))}
         </div>
     );
 };

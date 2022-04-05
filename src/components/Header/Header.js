@@ -1,4 +1,4 @@
-import { faBars, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClock, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
@@ -23,8 +23,6 @@ const Header = () => {
         );
     }
 
-    console.log(open);
-
     return (
         <nav className="flex justify-between items-center py-4 lg:py-8">
             <div className="z-10">
@@ -37,7 +35,7 @@ const Header = () => {
                 <FontAwesomeIcon
                     onClick={() => setOpen(!open)}
                     className="z-10 lg:hidden cursor-pointer"
-                    icon={faBars}
+                    icon={!open ? faBars : faXmark}
                 ></FontAwesomeIcon>
             </div>
             <div
