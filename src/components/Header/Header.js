@@ -24,7 +24,7 @@ const Header = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center py-4 lg:py-8">
+        <nav className="flex justify-between items-center py-4 border-b lg:py-8">
             <div className="z-10">
                 <Link className="text-2xl font-extrabold text-red-500" to="/">
                     Movie Chill

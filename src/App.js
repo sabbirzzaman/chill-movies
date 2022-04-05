@@ -4,6 +4,7 @@ import TvSeries from './components/TvSeries/TvSeries';
 import Header from './components/Header/Header';
 import Movies from './components/Movies/Movies';
 import WatchLater from './components/WatchLater/WatchLater';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='tv-series' element={<TvSeries></TvSeries>}></Route>
         <Route path='watch-later' element={<WatchLater></WatchLater>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
