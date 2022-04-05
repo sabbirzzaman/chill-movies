@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import SingleContent from '../SingleContent/SingleContent';
 
 const Trending = ({ content, title, directory }) => {
-    const trending = content.slice(0, 3);
+    const trending = content.slice(0, 4);
     const navigate = useNavigate();
-    console.log(directory)
 
     return (
         <div className="max-w-[325px] mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
@@ -18,7 +17,7 @@ const Trending = ({ content, title, directory }) => {
                     View All
                 </button>
             </div>
-            <div className="py-8 md:grid md:grid-cols-2 md:gap-2 lg:grid lg:grid-cols-3 lg:gap-8">
+            <div className="py-8 grid sm:grid-cols-2 md:grid-cols-3 md:gap-2 lg:grid lg:grid-cols-4 lg:gap-8">
                 {trending.map((content) => (
                     <SingleContent
                         key={content.id}

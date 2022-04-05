@@ -1,5 +1,5 @@
 //image sizes for tmdb
-export const img_300 = 'https://image.tmdb.org/t/p/w300';
+export const img_300 = 'https://www.themoviedb.org/t/p/w220_and_h330_face';
 export const img_500 = 'https://image.tmdb.org/t/p/w500';
 export const img_1920 = 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces';
 
