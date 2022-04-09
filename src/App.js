@@ -5,6 +5,7 @@ import Movies from './components/Movies/Movies';
 import WatchLater from './components/WatchLater/WatchLater';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
+import NotFounded from './components/NotFounded/NotFounded';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='movies' element={<Movies></Movies>}></Route>
         <Route path='tv-series' element={<TvSeries></TvSeries>}></Route>
         <Route path='watch-later' element={<WatchLater></WatchLater>}></Route>
+        <Route path='*' element={<NotFounded></NotFounded>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

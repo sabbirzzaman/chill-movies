@@ -4,8 +4,6 @@ import { img_1920 } from '../../config/config';
 const Banner = ({ content, heading }) => {
     const { backdrop_path } = content;
 
-    console.log(content)
-
     const heroStyle = {
         backgroundImage: `url(${img_1920}/${backdrop_path}`,
         backgroundSize: 'cover',
